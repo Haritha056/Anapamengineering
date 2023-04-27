@@ -1,0 +1,26 @@
+RewriteEngine on 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteRule ^Home index.html
+RewriteRule ^About about-company.html
+RewriteRule ^Acoustic_enclosure acousticenclosure.html
+RewriteRule ^AirventSilencer airventsilencer.html
+RewriteRule ^BlowOffSilencer blowoffsilencer.html
+RewriteRule ^BoilerComponents boilercomponents.html
+RewriteRule ^Contact contact-2.html
+RewriteRule ^EngineExhaustSilencer engineexhaust.html
+RewriteRule ^GasVentSilencer gasventsilencer.html
+RewriteRule ^PipingComponents pipingcomponents.html
+RewriteRule ^SafetyValveSilencer safetyvalvesilencer.html
+RewriteRule ^Silencer silencer.html
+RewriteRule ^SoundProofCabins soundproofcabins.html
+RewriteRule ^StartupVentSilencer startupventsilencer.html
+RewriteRule ^SteamBlowingSilencer steamblowingsilencer.html
+RewriteRule ^SteamVentSilencer steamventsilencer.html
+RewriteRule ^WarmUpVentSilencer warmupventsilencer.html
+ErrorDocument 404 /error-404
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ /error.php [L]
